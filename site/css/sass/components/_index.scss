@@ -1,0 +1,49 @@
+.containerIndex {
+  padding: 0 5px;
+}
+.training {
+  :nth-child(4){
+    max-width: 450px;
+    border: solid 1px $darkenBlue;
+    padding: 5px;
+    font-weight: 500;
+    li {
+      margin-bottom: 5px;
+    }
+  }
+  :nth-child(5){
+    @extend %note;
+  }
+}
+.imgContainer {
+  height: 300px;
+  width: 200px;
+  border: solid 1px rgb(0, 0, 0);
+  margin: auto;
+}
+
+@include minBreakPoint(770px) {
+  .containerIndex {
+    display: grid;
+    gap: 10px 5px;
+    grid-template-rows: 250px 1fr 150px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'training field'
+    'caravan field'
+    'caravan club ';
+  }
+  .training{
+    grid-area: training;
+  }
+  .field{
+    grid-area: field;
+
+  }
+  .caravan{
+    grid-area: caravan;
+  }
+  .club{
+    grid-area: club;
+  }
+}

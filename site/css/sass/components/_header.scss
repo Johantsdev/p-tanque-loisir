@@ -1,0 +1,27 @@
+.header{
+  height: 200px;
+  @include flexDisplay($direction : column);
+  letter-spacing: 2px;
+}
+.headerLogo{
+  margin-bottom: 20px;
+  @extend %logo;
+}
+.headerLogoLink:hover {
+  text-decoration: none;
+}
+.headerNav--button{
+  padding-bottom: 5px;
+}
+
+@include minBreakPoint(400px) {
+  .header{
+    font-size: 1.3rem;
+  }
+}
+
+@include minBreakPoint(500px) {
+  .headerNav--button{
+    padding-right: 15px;
+  }
+}

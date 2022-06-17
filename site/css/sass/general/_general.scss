@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h2 {
+  @extend %title;
+}
+
+a {
+  @include link($darkenBlue)
+}
+
+article {
+  max-width: 645px;
+  margin: auto;
+  margin-bottom: 15px;
+  * {
+    margin-bottom: 10px;
+  }
+}

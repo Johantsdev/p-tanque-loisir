@@ -1,0 +1,21 @@
+@mixin flexDisplay($justifyContent:center, $alignItems:center, $direction:row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin minBreakPoint($width) {
+  @media only screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin link($color) {
+  color: $color;
+  font-style: italic;
+  transition: all .3s;
+  &:hover {
+    text-decoration: underline;
+  }
+}
