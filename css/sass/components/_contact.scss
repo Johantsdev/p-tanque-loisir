@@ -28,19 +28,20 @@ iframe {
   }
   .contactIntro{
     grid-area: contactIntro;
+    max-width: 600px;
     margin: auto;
     font-size: 1.1rem;
   }
   .contactInfo{
     grid-area: contactInfo;
-    margin: auto;
+
   }
   .sendMessage{
     grid-area: sendMessage;
-    margin: auto;
     width: 70%;
   }
   .situation{
     grid-area: situation;
+    max-width: 550px;
   }
 }

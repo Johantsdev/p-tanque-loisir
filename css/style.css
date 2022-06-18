@@ -1,5 +1,5 @@
 .headerLogo {
-  border: solid 1px black;
+  border: solid 1px #2779b4;
   border-radius: 50%;
   padding: 30px;
   color: #2779b4;
@@ -85,6 +85,15 @@ article p {
   text-align: justify;
 }
 
+article:hover {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+article:hover h2 {
+  color: #b51c1c;
+}
+
 .container {
   padding: 10px 5px;
 }
@@ -105,11 +114,10 @@ article p {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 2px;
-  /*
-  background:
-  linear-gradient(to bottom, rgba(255, 255, 255, 0.873) 20%, lighten(rgba(58, 148, 212, 0.565),30%)),
-  url(../image/petanque-header.jpg) 40% 57% / cover;
-  box-shadow: 0 5px 10px lighten(rgba(58, 148, 212, 0.565),30%);*/
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(172, 170, 170, 0.873)), to(rgba(184, 216, 239, 0.565))), url(../image/petanque-header.jpg) 40% 57%/cover;
+  background: linear-gradient(to bottom, rgba(172, 170, 170, 0.873) 20%, rgba(184, 216, 239, 0.565)), url(../image/petanque-header.jpg) 40% 57%/cover;
+  -webkit-box-shadow: 0 5px 10px rgba(184, 216, 239, 0.565);
+          box-shadow: 0 5px 10px rgba(184, 216, 239, 0.565);
 }
 
 .headerLogo {
@@ -123,6 +131,11 @@ article p {
 .headerNav--button {
   padding-bottom: 5px;
   text-transform: capitalize;
+}
+
+.headerNav--button:hover {
+  text-decoration: none;
+  color: #b51c1c;
 }
 
 @media only screen and (min-width: 400px) {
@@ -236,6 +249,7 @@ iframe {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
     grid-area: contactIntro;
+    max-width: 600px;
     margin: auto;
     font-size: 1.1rem;
   }
@@ -243,14 +257,12 @@ iframe {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: contactInfo;
-    margin: auto;
   }
   .sendMessage {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
     grid-area: sendMessage;
-    margin: auto;
     width: 70%;
   }
   .situation {
@@ -258,6 +270,7 @@ iframe {
     -ms-grid-row-span: 2;
     -ms-grid-column: 2;
     grid-area: situation;
+    max-width: 550px;
   }
 }
 

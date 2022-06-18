@@ -30,6 +30,12 @@ article {
   p {
     text-align: justify;
   }
+  &:hover {
+    transition: all .5s;
+    h2 {
+      color: $red;
+    }
+  }
 }
 
 .container {
