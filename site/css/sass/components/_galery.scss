@@ -1,0 +1,17 @@
+.containerGalery {
+  h2 {
+    text-align: center;
+  }
+  article {
+    max-width: 1300px;
+  }
+}
+
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.galeryItem {
+  margin: 5px;
+}

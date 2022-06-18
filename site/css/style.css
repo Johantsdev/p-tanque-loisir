@@ -20,7 +20,7 @@ h3 {
   text-align: center;
   font-weight: 700;
   font-family: Amatic SC, sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .training :nth-child(5) {
@@ -35,7 +35,9 @@ h3 {
   font-weight: 500;
 }
 
-* {
+*, ::before, ::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -49,18 +51,13 @@ a {
   color: inherit;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 html {
   font-size: 16px;
 }
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background-color: rgba(184, 216, 239, 0.373);
+  background-color: rgba(184, 216, 239, 0.213);
 }
 
 a {
@@ -108,10 +105,11 @@ article p {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 2px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.873)), to(rgba(184, 216, 239, 0.565))), url(../image/petanque-header.jpg) 40% 57%/cover;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.873) 20%, rgba(184, 216, 239, 0.565)), url(../image/petanque-header.jpg) 40% 57%/cover;
-  -webkit-box-shadow: 0 5px 10px rgba(184, 216, 239, 0.565);
-          box-shadow: 0 5px 10px rgba(184, 216, 239, 0.565);
+  /*
+  background:
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.873) 20%, lighten(rgba(58, 148, 212, 0.565),30%)),
+  url(../image/petanque-header.jpg) 40% 57% / cover;
+  box-shadow: 0 5px 10px lighten(rgba(58, 148, 212, 0.565),30%);*/
 }
 
 .headerLogo {
@@ -268,16 +266,44 @@ iframe {
 }
 
 @media only screen and (min-width: 900px) {
+  .containerEvent {
+    font-size: 1.1rem;
+  }
   .containerEvent article {
-    max-width: 900px;
+    max-width: 1100px;
   }
   .tournament {
+    clear: both;
     float: left;
     max-width: 550px;
   }
   .otherDates {
+    clear: both;
     float: right;
     max-width: 450px;
   }
+}
+
+.containerGalery h2 {
+  text-align: center;
+}
+
+.containerGalery article {
+  max-width: 1300px;
+}
+
+.galery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.galeryItem {
+  margin: 5px;
 }
 /*# sourceMappingURL=style.css.map */
