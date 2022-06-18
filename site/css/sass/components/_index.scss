@@ -1,6 +1,4 @@
-.containerIndex {
-  padding: 0 5px;
-}
+
 .training {
   :nth-child(4){
     max-width: 450px;
@@ -15,35 +13,48 @@
     @extend %note;
   }
 }
+
 .imgContainer {
-  height: 300px;
-  width: 200px;
-  border: solid 1px rgb(0, 0, 0);
+  width: 90%;
+  max-width: 400px;
   margin: auto;
+  img {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 @include minBreakPoint(770px) {
   .containerIndex {
     display: grid;
-    gap: 10px 5px;
-    grid-template-rows: 250px 1fr 150px;
+    gap: 10px 20px;
+    grid-template-rows: 250px 1fr 250px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-    'training field'
+    'training club'
     'caravan field'
-    'caravan club ';
+    'caravan field ';
   }
   .training{
     grid-area: training;
+    max-width: 500px;
   }
   .field{
     grid-area: field;
-
+    max-width: 600px;
+    margin: auto;
   }
   .caravan{
     grid-area: caravan;
+    max-width: 400px;
   }
   .club{
     grid-area: club;
+    max-width: 500px;
+    margin: auto;
+  }
+  .imgContainer {
+    width: 100%;
+    max-width: none;
   }
 }

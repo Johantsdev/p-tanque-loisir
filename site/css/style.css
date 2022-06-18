@@ -15,10 +15,24 @@ h2 {
   font-size: 1.7rem;
 }
 
+h3 {
+  color: #2779b4;
+  text-align: center;
+  font-weight: 700;
+  font-family: Amatic SC, sans-serif;
+  font-size: 1.3rem;
+}
+
 .training :nth-child(5) {
   font-size: 0.9rem;
   font-style: italic;
   color: #8ec1e6;
+}
+
+.date {
+  display: block;
+  color: #8ec1e6;
+  font-weight: 500;
 }
 
 * {
@@ -46,6 +60,7 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: rgba(184, 216, 239, 0.373);
 }
 
 a {
@@ -69,6 +84,14 @@ article * {
   margin-bottom: 10px;
 }
 
+article p {
+  text-align: justify;
+}
+
+.container {
+  padding: 10px 5px;
+}
+
 .header {
   height: 200px;
   display: -webkit-box;
@@ -85,6 +108,10 @@ article * {
       -ms-flex-align: center;
           align-items: center;
   letter-spacing: 2px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.873)), to(rgba(184, 216, 239, 0.565))), url(../image/petanque-header.jpg) 40% 57%/cover;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.873) 20%, rgba(184, 216, 239, 0.565)), url(../image/petanque-header.jpg) 40% 57%/cover;
+  -webkit-box-shadow: 0 5px 10px rgba(184, 216, 239, 0.565);
+          box-shadow: 0 5px 10px rgba(184, 216, 239, 0.565);
 }
 
 .headerLogo {
@@ -97,6 +124,7 @@ article * {
 
 .headerNav--button {
   padding-bottom: 5px;
+  text-transform: capitalize;
 }
 
 @media only screen and (min-width: 400px) {
@@ -111,10 +139,6 @@ article * {
   }
 }
 
-.containerIndex {
-  padding: 0 5px;
-}
-
 .training :nth-child(4) {
   max-width: 450px;
   border: solid 1px #2779b4;
@@ -127,14 +151,80 @@ article * {
 }
 
 .imgContainer {
-  height: 300px;
-  width: 200px;
-  border: solid 1px black;
+  width: 90%;
+  max-width: 400px;
   margin: auto;
+}
+
+.imgContainer img {
+  width: 100%;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 770px) {
   .containerIndex {
+    display: -ms-grid;
+    display: grid;
+    gap: 10px 20px;
+    -ms-grid-rows: 250px 1fr 250px;
+        grid-template-rows: 250px 1fr 250px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'training club' 'caravan field' 'caravan field ';
+  }
+  .training {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: training;
+    max-width: 500px;
+  }
+  .field {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: field;
+    max-width: 600px;
+    margin: auto;
+  }
+  .caravan {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: caravan;
+    max-width: 400px;
+  }
+  .club {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: club;
+    max-width: 500px;
+    margin: auto;
+  }
+  .imgContainer {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.contactInfo b {
+  color: #2779b4;
+}
+
+.blocContact {
+  max-width: 500px;
+  width: 100%;
+}
+
+.blocContact * {
+  width: 100%;
+}
+
+iframe {
+  width: 100%;
+}
+
+@media only screen and (min-width: 770px) {
+  .containerContact {
     display: -ms-grid;
     display: grid;
     gap: 10px 5px;
@@ -142,37 +232,52 @@ article * {
         grid-template-rows: 250px 1fr 150px;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'training field' 'caravan field' 'caravan club ';
+        grid-template-areas: 'contactInfo contactIntro' 'sendMessage situation' 'sendMessage situation ';
   }
-  .training {
+  .contactIntro {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: contactIntro;
+    margin: auto;
+    font-size: 1.1rem;
+  }
+  .contactInfo {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    grid-area: training;
+    grid-area: contactInfo;
+    margin: auto;
   }
-  .field {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 2;
-    grid-area: field;
-  }
-  .caravan {
+  .sendMessage {
     -ms-grid-row: 2;
     -ms-grid-row-span: 2;
     -ms-grid-column: 1;
-    grid-area: caravan;
+    grid-area: sendMessage;
+    margin: auto;
+    width: 70%;
   }
-  .club {
-    -ms-grid-row: 3;
+  .situation {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
     -ms-grid-column: 2;
-    grid-area: club;
+    grid-area: situation;
   }
 }
 
-.containerContact {
-  padding: 0 5px;
+.containerEvent div {
+  margin-top: 30px;
 }
 
-iframe {
-  width: 100%;
+@media only screen and (min-width: 900px) {
+  .containerEvent article {
+    max-width: 900px;
+  }
+  .tournament {
+    float: left;
+    max-width: 550px;
+  }
+  .otherDates {
+    float: right;
+    max-width: 450px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

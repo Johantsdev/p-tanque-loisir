@@ -8,15 +8,29 @@
   font-size: 1.9rem;
 }
 
-%title {
+%title2 {
   color: $darkenBlue;
   font-weight: 700;
   font-family: Amatic SC, sans-serif;
   font-size: 1.7rem;
 }
 
+%title3 {
+  color: $darkenBlue;
+  text-align: center;
+  font-weight: 700;
+  font-family: Amatic SC, sans-serif;
+  font-size: 1.3rem;
+}
+
 %note {
   font-size: 0.9rem;
   font-style: italic;
   color: $lightenBlue;
+}
+
+%date {
+  display: block;
+  color: $lightenBlue;
+  font-weight: 500;
 }

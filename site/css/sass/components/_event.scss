@@ -1,0 +1,25 @@
+.date {
+  @extend %date
+}
+.containerEvent{
+  div {
+    margin-top: 30px;
+  }
+}
+
+@include minBreakPoint(900px) {
+
+  .containerEvent {
+    article {
+      max-width: 900px;
+    }
+  }
+  .tournament{
+    float: left;
+    max-width: 550px;
+  }
+  .otherDates {
+    float: right;
+    max-width: 450px;
+  } 
+}

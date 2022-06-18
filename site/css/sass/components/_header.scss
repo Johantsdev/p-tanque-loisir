@@ -2,6 +2,10 @@
   height: 200px;
   @include flexDisplay($direction : column);
   letter-spacing: 2px;
+  background:
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.873) 20%, lighten(rgba(58, 148, 212, 0.565),30%)),
+  url(../image/petanque-header.jpg) 40% 57% / cover;
+  box-shadow: 0 5px 10px lighten(rgba(58, 148, 212, 0.565),30%);
 }
 .headerLogo{
   margin-bottom: 20px;
@@ -12,6 +16,7 @@
 }
 .headerNav--button{
   padding-bottom: 5px;
+  text-transform: capitalize;
 }
 
 @include minBreakPoint(400px) {

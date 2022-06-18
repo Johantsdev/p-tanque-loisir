@@ -1,7 +1,46 @@
-.containerContact {
-  padding: 0 5px;
-}
 
+.contactInfo {
+  b {
+    color: $darkenBlue;
+  }
+}
+.blocContact {
+  max-width: 500px;
+  width: 100%;
+  * {
+    width: 100%;
+  }
+}
 iframe {
   width: 100%;
+}
+
+@include minBreakPoint(770px) {
+  .containerContact {
+    display: grid;
+    gap: 10px 5px;
+    grid-template-rows: 250px 1fr 150px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'contactInfo contactIntro'
+    'sendMessage situation'
+    'sendMessage situation ';
+  }
+  .contactIntro{
+    grid-area: contactIntro;
+    margin: auto;
+    font-size: 1.1rem;
+  }
+  .contactInfo{
+    grid-area: contactInfo;
+    margin: auto;
+  }
+  .sendMessage{
+    grid-area: sendMessage;
+    margin: auto;
+    width: 70%;
+  }
+  .situation{
+    grid-area: situation;
+  }
 }

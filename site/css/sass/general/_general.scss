@@ -7,10 +7,15 @@ html {
 }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background-color: $bgColor;
 }
 
 h2 {
-  @extend %title;
+  @extend %title2;
+}
+
+h3 {
+  @extend %title3;
 }
 
 a {
@@ -24,4 +29,11 @@ article {
   * {
     margin-bottom: 10px;
   }
+  p {
+    text-align: justify;
+  }
+}
+
+.container {
+  padding:10px 5px;
 }
